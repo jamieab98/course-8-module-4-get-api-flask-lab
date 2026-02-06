@@ -15,7 +15,7 @@ def home():
 @app.route("/products")
 def get_products():
     stuff = jsonify([product for product in products])
-    return stuff
+    return stuff, 200
     pass  # TODO: Return all products or filter by ?category=
 
 # TODO: Implement GET /products/<id> route that returns a specific product by ID or 404
