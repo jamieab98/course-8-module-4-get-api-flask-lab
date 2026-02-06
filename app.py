@@ -16,7 +16,7 @@ def home():
 def get_products():
     category = request.args.get("category")
     if category:
-        stuff = [product for product in products if products["category"] == category]
+        stuff = [product for product in products if product["category"] == category]
     else:
         stuff = [product for product in products]
     return jsonify(stuff), 200
