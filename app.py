@@ -22,7 +22,7 @@ def get_products():
 
 @app.route("/products/<int:id>")
 def get_product_by_id(id):
-    thing = [item["name"] for item in products if item["id"] == id]
+    thing = [item["name"] for item in products if item["id"] == id][0]
     if thing == []:
         return jsonify({"message": "Item not found"}), 404
     return jsonify({"name": thing}), 200
