@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return jsonify("welcome"), 200
+    return jsonify({"message": "welcome"}), 200
     pass  # TODO: Return a welcome message
 
 # TODO: Implement GET /products route that returns all products or filters by category
