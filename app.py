@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return("Welcome to the home page")
+    return("welcome")
     pass  # TODO: Return a welcome message
 
 # TODO: Implement GET /products route that returns all products or filters by category
