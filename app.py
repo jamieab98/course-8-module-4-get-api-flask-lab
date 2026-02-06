@@ -24,7 +24,7 @@ def get_products():
 def get_product_by_id(id):
     thing = [item["name"] for item in products if item["id"] == id]
     if thing == []:
-        return f"Item not found", 404
+        return jsonify({"message": "Item not found"}), 404
     return thing
     pass  # TODO: Return product by ID or 404
 
