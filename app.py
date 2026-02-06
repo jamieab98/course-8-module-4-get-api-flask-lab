@@ -14,7 +14,11 @@ def home():
 
 @app.route("/products")
 def get_products():
-    stuff = [product for product in products]
+    category = request.args.get("category")
+    if category:
+        stuff = [product for product in products if products["category"] == category]
+    else:
+        stuff = [product for product in products]
     return jsonify(stuff), 200
     pass  # TODO: Return all products or filter by ?category=
 
